@@ -1,4 +1,7 @@
-<h1>Listing products</h1>
+<h1 style="margin-top: 10px">Listing products</h1>
+<p>
+<%= l Time.now,:format => :long  %>
+</p>
 <% Category.all.each_with_index do |cate, index| %>
 	<%= cate.name %>
 	<% cate.tags.each do |tag| %>
@@ -12,3 +15,4 @@
 <%= will_paginate @products %>
 
 <%= link_to 'New Product', new_product_path %>
+

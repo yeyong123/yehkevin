@@ -1,3 +1,4 @@
+#encoding:utf-8
 <!DOCTYPE html>
 <html>
 <head>
@@ -7,6 +8,28 @@
   <%= csrf_meta_tags %>
 </head>
 <body>
+	<header>
+		<div class="gp-log">
+
+		</div>
+		<div class="header">
+			<ul>
+				<li><%= link_to t('.home'), products_path %></li>
+				<li><%= link_to t('.products'), '#' %></li>
+				<li><%= link_to t('.customer'), '#' %></li>
+				<li><%= link_to t('.about'), '#' %></li>
+				<li><%= link_to t('.new'), '#' %></li>
+				<li><%= link_to t('.contact'), '#' %></li>
+				<li>	<form action="/search" method="get">
+					<input type="text" name="q" value="" placeholder="输入产品" />
+					
+				</form></li>
+			</ul>
+		</div>
+		<div class="keyword">
+			<%= t('.keyword') %>:<a href="#">高空作业平台</a><a href="#">高空作业平台</a><a href="#">高空作业平台</a><a href="#">高空作业平台</a>
+		</div>
+		</header>
 
 <%= yield %>
 

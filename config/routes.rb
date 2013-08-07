@@ -1,6 +1,7 @@
 Yehkevin::Application.routes.draw do
+	scope '(locale)' do
   resources :products
-
+	end
 
   # The priority is based upon order of creation:
   # first created -> highest priority.
