@@ -1,9 +1,12 @@
 Yehkevin::Application.routes.draw do
+  mount Ckeditor::Engine => '/ckeditor'
+
   scope '(:locale)' do
 	resources :orders
   resources :line_items
   resources :carts
   resources :products
+	match 'search' => 'products#search'
 	root to: 'home#index', as: 'home'
 	end
   # The priority is based upon order of creation:

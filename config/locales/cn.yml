@@ -18,6 +18,7 @@
       detail: "规格细节"
       video: "视频展示"
       service: "售后服务"
+      addcart: "加入购物车"
 
   home:
     index:

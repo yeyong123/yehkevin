@@ -1,4 +1,4 @@
-source 'https://rubygems.org'
+source 'http://ruby.taobao.org'
 
 gem 'rails', '3.2.13'
 
@@ -10,6 +10,8 @@ gem 'devise'
 gem 'will_paginate'
 gem 'carrierwave'
 gem 'ckeditor'
+gem 'mime-types'
+gem 'paperclip'
 gem 'rails-i18n'
 gem 'rails_kindeditor'
 gem 'bootstrap-sass'

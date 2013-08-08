@@ -20,8 +20,9 @@
     <%= f.text_field :number %>
   </div>
   <div class="field">
-    <%= f.label :content %><br />
-    <%= f.text_area :content %>
+		<%= f.label :content %><br />
+		<%= javascript_include_tag "ckeditor/ckeditor.js" %>  
+    <%= f.cktext_area :content %>
   </div>
   <div class="field">
 		<%= f.fields_for :pictures do |pic| %>

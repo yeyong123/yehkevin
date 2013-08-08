@@ -1,0 +1,9 @@
+	<nav class="cart-show">
+		<%= link_to t('.cart'), cart_path(@cart) %>
+		<% if @cart.line_items.empty? %>
+			<span>0</span>
+		<% else %>
+			<span>	<%= link_to @cart.total_items, cart_path(@cart) %></span>
+		<% end %>件
+		</nav>
+		

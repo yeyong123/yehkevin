@@ -11,26 +11,17 @@
 	<header>
 	<div class="gp-log">
 		<%= link_to t('.myaccout'), new_order_path %>
-		<nav class="cart-show">
-		<%= link_to t('.cart'), cart_path(@cart) %>
-		<% if @cart.line_items.empty? %>
-			<span>0</span>
-		<% else %>
-			<span>	<%= link_to @cart.total_items, cart_path(@cart) %></span>
-		<% end %>件
-		</nav>
-		</div>
+				</div>
 		<div class="header">
 			<ul>
 				<li><%= link_to t('.home'), home_path %></li>
-				<li><%= link_to t('.products'), products_path(@product) %></li>
+				<li><%= link_to t('.products'), products_path  %></li>
 				<li><%= link_to t('.customer'), '#' %></li>
 				<li><%= link_to t('.about'), '#' %></li>
 				<li><%= link_to t('.new'), '#' %></li>
 				<li><%= link_to t('.contact'), '#' %></li>
 				<li>	<form action="/search" method="get">
 					<input type="text" name="q" value="" placeholder="输入产品" />
-					
 				</form></li>
 			</ul>
 		</div>

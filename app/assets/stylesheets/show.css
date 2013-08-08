@@ -1,6 +1,6 @@
 body {
 	margin: auto;
-	width: 960px;
+	width: 980px;
 }
 .gp-log {
 	margin: 5px 0 5px 0;
@@ -52,7 +52,7 @@ body {
 }
 .right-product {
 	margin: 5px 0 0 3px;
-	width: 199px;
+	width: 200px;
 	float: left;
 	border: 1px solid;
 	height: 600px;
@@ -75,6 +75,9 @@ body {
 	height: 230px;
 	border-radius: 5px;
 	box-shadow: 0px 4px 2px #909090;
+}
+.recommend a:hover {
+	background: none;
 }
 .recommend b{
  padding-left: 10px;
