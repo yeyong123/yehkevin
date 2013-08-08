@@ -1,8 +1,11 @@
 Yehkevin::Application.routes.draw do
-	scope '(locale)' do
+  scope '(locale)' do
+	resources :orders
+  resources :line_items
+  resources :carts
   resources :products
+root to: 'home#index', as: 'home'
 	end
-
   # The priority is based upon order of creation:
   # first created -> highest priority.
 

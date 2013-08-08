@@ -1,0 +1,7 @@
+#encoding:utf-8
+<div class="cart_title">cart</div>
+<table>
+	<%= render(cart.line_items) %>
+</table>
+<%= button_to '提交', new_order_path, method: :get %>
+

@@ -134,9 +134,11 @@
 		</div>
 		<div class="right-product">
 			<h3><%= t('.recommend') %></h3>
-			<% Product.limit(2).all.each do |product| %>
+			<% Product.limit(4).all.each do |product| %>
 				<div class="recommend">
-					<%= image_tag(product.pictures.first.image_url(:normal)) %>
+					<% product.pictures.limit(1).each do |pic| %>
+						<%= image_tag(pic.image_url(:normal)) %> 
+					<% end %>
 					<b><%= product.title %></b>
 					<b><%= product.number %></b>
 				</div>
