@@ -1,3 +1,24 @@
 // Place all the styles related to the home controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+.cart-show {
+	float: right;
+	margin: 25px 18px 0 0;
+	width: 95px;
+	padding: auto;
+	background: #e8e8e8;
+	border-radius: 8px;
+}	
+.cart-show span{
+	letter-spacing: 2px;
+}
+.cart-show a:hover {
+	background: none;
+	color: black;
+	font-style: bold
+}
+.cart-show a:first-child {
+	padding-left: 3px;
+	font-style: bold;
+}
+

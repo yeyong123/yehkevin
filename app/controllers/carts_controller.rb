@@ -24,7 +24,7 @@ class CartsController < ApplicationController
       format.json { render json: @cart }
     end
   end
-
+end
   # GET /carts/new
   # GET /carts/new.json
   def new
@@ -80,7 +80,7 @@ class CartsController < ApplicationController
     @cart.destroy
 
     respond_to do |format|
-      format.html { redirect_to carts_url }
+      format.html { redirect_to home_url }
       format.json { head :no_content }
     end
   end

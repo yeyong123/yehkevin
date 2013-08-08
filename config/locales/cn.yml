@@ -8,6 +8,7 @@
       new: "公司动态"
       contact: "联系我们"
       keyword: "热门关键字"
+      cart: "购物车"
 
   products:
     show:
@@ -17,3 +18,7 @@
       detail: "规格细节"
       video: "视频展示"
       service: "售后服务"
+
+  home:
+    index:
+      addcart: "加入购物车"

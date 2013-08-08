@@ -1,6 +1,6 @@
 <% @products.each do |product| %>
 	<%= product.title %>
 	<%= product.number %>
-	<%= button_to 'pay', line_items_path(product_id: product) %>
+	<%= button_to t('.addcart'), line_items_path(product_id: product), class: "btn btn-info" %>
 <% end %>
-<%= render @cart %>
+
