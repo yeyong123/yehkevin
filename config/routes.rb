@@ -1,11 +1,17 @@
 Yehkevin::Application.routes.draw do
-  scope '(:locale)' do
-	resources :orders
-  resources :line_items
-  resources :carts
+ scope '(locale)' do
+ 	devise_for :users
+
+  mount Ckeditor::Engine => '/ckeditor'
+
   resources :products
+	resources :carts
+	resources :orders
+	resources :line_items
+	match '/search' => 'products#search'
 	root to: 'home#index', as: 'home'
 	end
+
   # The priority is based upon order of creation:
   # first created -> highest priority.
 

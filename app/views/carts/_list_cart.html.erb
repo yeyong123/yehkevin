@@ -1,0 +1,12 @@
+	<nav class="cart-show">
+	<%= current_user.email %>
+		<%= link_to t('.cart'), cart_path(@cart) %>
+		<% if user_session %>
+			<% unless @cart.line_items.empty? %>
+<%= link_to @cart.total_items, cart_path(@cart) %></span>
+		<% else %>
+			<span><span>0</span></span>
+		<% end %>件
+	<% end %>
+		</nav>
+		

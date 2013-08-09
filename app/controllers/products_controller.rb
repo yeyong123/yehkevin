@@ -2,6 +2,7 @@ class ProductsController < ApplicationController
   # GET /products
   # GET /products.json
   def index
+		@cart = current_cart
 		unless params[:t]
 			@products = Product.order("id desc").paginate(page: params[:page], per_page: 24)
 		else 
@@ -12,6 +13,10 @@ class ProductsController < ApplicationController
 		end
 	end
 
+	def search
+		@products = Product.where("title like ? or number like ?", 
+															'%'+params[:q]+'%','%'+params[:q]+'%').order("id desc").paginate(page: params[:page], per_page: 12)
+	end
   # GET /products/1
   # GET /products/1.json
   def show

@@ -10,27 +10,27 @@
 <body>
 	<header>
 	<div class="gp-log">
-		<%= link_to t('.myaccout'), new_order_path %>
-		<nav class="cart-show">
-		<%= link_to t('.cart'), cart_path(@cart) %>
-		<% if @cart.line_items.empty? %>
-			<span>0</span>
-		<% else %>
-			<span>	<%= link_to @cart.total_items, cart_path(@cart) %></span>
-		<% end %>件
-		</nav>
+		<%= link_to t('.myaccout'), orders_path(@order) %>
+		<div class="user-login">
+			<% if current_user %>
+				<%= link_to "注销",destroy_user_session_path, method: :delete %>|
+				<%= link_to "修改密码", edit_registration_path(:user) %>
+			<% else %>
+				<%= link_to "注册", new_registration_path(:user) %> | 
+				<%= link_to "登录", new_session_path(:user) %>
+			<% end %>
 		</div>
+				</div>
 		<div class="header">
 			<ul>
 				<li><%= link_to t('.home'), home_path %></li>
-				<li><%= link_to t('.products'), products_path(@product) %></li>
+				<li><%= link_to t('.products'), products_path  %></li>
 				<li><%= link_to t('.customer'), '#' %></li>
 				<li><%= link_to t('.about'), '#' %></li>
 				<li><%= link_to t('.new'), '#' %></li>
 				<li><%= link_to t('.contact'), '#' %></li>
 				<li>	<form action="/search" method="get">
 					<input type="text" name="q" value="" placeholder="输入产品" />
-					
 				</form></li>
 			</ul>
 		</div>

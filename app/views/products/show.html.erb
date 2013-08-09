@@ -111,10 +111,7 @@
 <p>dasd</p><p>dasd</p><p>dasd</p><p>dasd</p><p>dasd</p><p>dasd</p><p>dasd</p><p>dasd</p><p>dasd</p><p>dasd</p><p>dasd</p><p>dasd</p><p>dasd</p><p>dasd</p><p>dasd</p><p>dasd</p><p>dasd</p><p>dasd</p><p>dasd</p><p>dasd</p><p>dasd</p><p>dasd</p><p>dasd</p><p>dasd</p><p>dasd</p><p>dasd</p><p>dasd</p><p>dasd</p><p>dasd</p><p>dasd</p><p>dasd</p>
 						</li>
 						<li class="tab_con">
-						<img src="image/che1.jpg" />
-						<img src="image/6.jpg" />
-						<img src="image/5.jpg" />
-						<img src="image/ch3.jpg" />
+						<%= raw @product.content %>
 						</li>
 						<li class="tab_con">
 						<img src="image/4.jpg" />
@@ -134,11 +131,9 @@
 		</div>
 		<div class="right-product">
 			<h3><%= t('.recommend') %></h3>
-			<% Product.limit(4).all.each do |product| %>
+			<% Product.limit(2).all.each do |product| %>
 				<div class="recommend">
-					<% product.pictures.limit(1).each do |pic| %>
-						<%= image_tag(pic.image_url(:normal)) %> 
-					<% end %>
+					<%= image_tag(product.pictures.first.image_url(:normal)) %>
 					<b><%= product.title %></b>
 					<b><%= product.number %></b>
 				</div>
