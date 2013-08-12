@@ -34,11 +34,9 @@
 						<%= raw @product.content %>
 						</li>
 						<li class="tab_con">
-						<img src="image/4.jpg" />
-						<img src="image/che1.jpg" />
-						<img src="image/6.jpg" />
-						<img src="image/5.jpg" />
-						<img src="image/ch3.jpg" />
+						<% @product.videos.each do |video| %>
+							<%=video_tag video.video_url, :size => "420x340", :controls => true %>
+						<% end %>
 						</li>
 						<li class="tab_con">
 						<img src="image/4.jpg" />

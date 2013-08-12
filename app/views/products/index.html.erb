@@ -5,9 +5,9 @@
 <%= l Time.now,:format => :long  %>
 </p>
 <% Category.all.each_with_index do |cate, index| %>
-	<%= cate.name %>
+	<%= link_to cate.name, home_path(cate.id) %>
 	<% cate.tags.each do |tag| %>
-		<%= tag.name %>
+		<%= link_to tag.name, category_path(tag.id) %>
 		<% tag.lists.each do |list| %>
 			<%= link_to list.name, products_path(t:list) %>
 		<% end %>

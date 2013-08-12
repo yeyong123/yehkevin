@@ -1,5 +1,7 @@
 	<nav class="cart-show">
+	<% if user_signed_in? %>
 	<%= current_user.email %>
+<% end %>
 		<%= link_to t('.cart'), cart_path(@cart) %>
 		<% if current_user %>
 			<% if @cart.line_items.empty? %>

@@ -1,14 +1,20 @@
 Yehkevin::Application.routes.draw do
 
+
   scope '(:locale)' do
  	devise_for :users
 
   mount Ckeditor::Engine => '/ckeditor'
-
+	resources :abouts
+	resources :companies
+	resources :customers
   resources :products
 	resources :carts
+	match '/contact', to: 'home#contact'
 	resources :orders
+  resources :news
 	resources :line_items
+	resources :categories
 	match '/search' => 'products#search'
 	root to: 'home#index', as: 'home'
 	end

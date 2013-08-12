@@ -28,10 +28,10 @@
 			<ul class="nav">
 				<li><%= link_to t('.home'), home_path %></li>
 				<li><%= link_to t('.products'), products_path  %></li>
-				<li><%= link_to t('.customer'), '#' %></li>
-				<li><%= link_to t('.about'), '#' %></li>
-				<li><%= link_to t('.new'), '#' %></li>
-				<li><%= link_to t('.contact'), '#' %></li>
+				<li><%= link_to t('.customer'), customers_path %></li>
+				<li><%= link_to t('.about'), abouts_path %></li>
+				<li><%= link_to t('.new'), companies_path %></li>
+				<li><%= link_to t('.contact'), contact_path %></li>
 				<li>	<form action="/search" method="get">
 					<input type="text" name="q" value="" placeholder="输入产品" />
 				</form></li>

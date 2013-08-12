@@ -30,6 +30,12 @@
 			<%= pic.file_field :image %>
 		<% end %>
   </div>
+	<div class="field">
+		<%= f.fields_for :videos do |video| %>
+			<%= video.label :video %>
+			<%= video.file_field :video %>
+		<% end %>
+	</div>
   <div class="actions">
     <%= f.submit %>
   </div>

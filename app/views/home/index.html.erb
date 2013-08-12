@@ -1,6 +1,4 @@
 <!-- 首页界面 -->
-<header>
-</header>
 <aside>
 <div class="nav-list">
 	<%= render "products/nav_list" %>
@@ -8,7 +6,38 @@
 <div class="index-image">
 	dasd
 </div>
+<div class="index_show_product">
+	<img src="assets/4.jpg" />
+	<img src="assets/4.jpg" />
+	<img src="assets/4.jpg" />
+	<img src="assets/4.jpg" />
+</div>
+<div class="index_desc">
+	<div class="right-desc">
+		<% About.limit(1).each do |about| %>
+			<h3>关于我们</h3>
+			<p>	<%= link_to image_tag(about.image_url), about %>
+			<%= truncate(strip_tags(about.content),:length => 180) %></p>
+		<% end %>
+		</div>	
+		<div class="right-desc">
+			<h3>公司最新动态</h3>
+			<table class="table">
+				<% Company.limit(5).each do |com| %>
 
+					<tr>
+						<td><%= time_ago_in_words(com.created_at) %>前</td>
+						<td><%= link_to com.title, company_path(com.id) %></td>
+					</tr>
+				<% end %>
+
+			</table>
+	</div>
+<div class="right-desc">
+		dsa
+	</div>
+
+</div>
 </aside>
 <div style="clear: both">
 <% @products.each do |product| %>

@@ -1,14 +1,16 @@
 .nav-drop {
 	margin-left: -15px;
 	width: 150px;
-	border: 1px solid;
+	border: 1px solid #e8e8e8;
+	box-shadow: 2px 2px 2px #909090;
+	margin-right: 5px;
 }
 .nav-drop ul {
 	list-style: none;
 }
 .nav-drop ul li {
 	border-bottom: 1px solid;
-	padding: 8px 20px 10px 30px;
+	padding: 10px 20px 10px 30px;
 }
 .nav-drop a:hover {
 	background: none;
@@ -39,6 +41,7 @@
 	margin-top: 10px;
 }
 .nav-drop h3 {
+	background: yellow;
 	text-align: center;
 	margin: 0;
 	padding: 0;
