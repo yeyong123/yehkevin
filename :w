@@ -22,7 +22,7 @@
 		</div>	
 		<div class="right-desc">
 			<h3>公司最新动态</h3>
-			<%= render partial: 'companies/company_list', locals: {companies: @companies} %>
+			<%= render partial: 'companies/company_list', locals: {companies: companies} %>
 	</div>
 <div class="right-desc">
 		dsa

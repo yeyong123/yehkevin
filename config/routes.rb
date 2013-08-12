@@ -1,7 +1,8 @@
 Yehkevin::Application.routes.draw do
 
-
   scope '(:locale)' do
+
+match '/member', to: 'users#index'
  	devise_for :users
 
   mount Ckeditor::Engine => '/ckeditor'
