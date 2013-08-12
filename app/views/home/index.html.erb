@@ -1,6 +1,23 @@
+<!-- 首页界面 -->
+<header>
+</header>
+<aside>
+<div class="nav-list">
+	<%= render "products/nav_list" %>
+</div>
+<div class="index-image">
+	dasd
+</div>
+
+</aside>
+<div style="clear: both">
 <% @products.each do |product| %>
+	<%= image_tag(product.pictures.first.image_url(:normal)) %>
 	<%= product.title %>
 	<%= product.number %>
 	<%= button_to t('.addcart'), line_items_path(product_id: product), class: "btn btn-info" %>
 <% end %>
+<%= render 'carts/list_cart' %>
+</div>
+<!-- 首页界面 -->
 

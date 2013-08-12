@@ -39,7 +39,7 @@
 	box-shadow: 2px 2px 2px #909090;
 }
 .header form {
-	margin-top: -8px;
+	margin-top: -5px;
 }
 .keyword {
 	margin-top: 3px;
@@ -56,4 +56,8 @@
 .keyword a:hover {
 	background: none;
 	color: blue;
+}
+//最上面的logo的地方的代码
+.user-login{
+	float: right;
 }

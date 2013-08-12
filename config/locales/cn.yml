@@ -9,6 +9,7 @@
       contact: "联系我们"
       keyword: "热门关键字"
       cart: "购物车"
+      myaccout: "个人中心"
 
   products:
     show:
@@ -23,3 +24,4 @@
   home:
     index:
       addcart: "加入购物车"
+  

@@ -4,89 +4,7 @@
 			|<%= link_to t('.destroy'), product_path(@product), method: :delete, data: {confirm: "确定删除吗？"} %>
 		</div>
 		<div class="nav-list">
-			<nav class="nav-drop">
-		<h3>分类导航</h3>
-			 <ul>
-				 <li>
-				 <a href="#">搬运设备</a>
-				 <ul>
-					 <li><a href="#">油桶搬运设备</a><br />
-					 <a href="#">油桶夹</a><a href="#">油桶夹</a><a href="#">油桶夹</a><a href="#">油桶夹</a>
-					 </li>
-					 <li><a href="#">油桶搬运设备</a><br />
-					 <a href="#">油桶夹</a><a href="#">油桶夹</a><a href="#">油桶夹</a><a href="#">油桶夹</a>
-					 </li>
-					 <li><a href="#">油桶搬运设备</a><br />
-					 <a href="#">油桶夹</a><a href="#">油桶夹</a><a href="#">油桶夹</a><a href="#">油桶夹</a>
-					 </li>
-
-				 </ul>
-				 </li>
-				 <li>
-				 <a href="#">搬运设备</a>
-				 <ul>
-					 <li><a href="#">油桶搬运设备</a><br />
-					 <a href="#">油桶夹</a><a href="#">油桶夹</a><a href="#">油桶夹</a><a href="#">油桶夹</a>
-					 </li>
-					 <li><a href="#">油桶搬运设备</a><br />
-					 <a href="#">油桶夹</a><a href="#">油桶夹</a><a href="#">油桶夹</a><a href="#">油桶夹</a>
-					 </li>
-					 <li><a href="#">油桶搬运设备</a><br />
-					 <a href="#">油桶夹</a><a href="#">油桶夹</a><a href="#">油桶夹</a><a href="#">油桶夹</a>
-					 </li>
-
-				 </ul>
-				 </li>
-				 <li>
-				 <a href="#">搬运设备</a>
-				 <ul>
-					 <li><a href="#">油桶搬运设备</a><br />
-					 <a href="#">油桶夹</a><a href="#">油桶夹</a><a href="#">油桶夹</a><a href="#">油桶夹</a>
-					 </li>
-					 <li><a href="#">油桶搬运设备</a><br />
-					 <a href="#">油桶夹</a><a href="#">油桶夹</a><a href="#">油桶夹</a><a href="#">油桶夹</a>
-					 </li>
-					 <li><a href="#">油桶搬运设备</a><br />
-					 <a href="#">油桶夹</a><a href="#">油桶夹</a><a href="#">油桶夹</a><a href="#">油桶夹</a>
-					 </li>
-
-				 </ul>
-				 </li>
-				 <li>
-				 <a href="#">搬运设备</a>
-				 <ul>
-					 <li><a href="#">油桶搬运设备</a><br />
-					 <a href="#">油桶夹</a><a href="#">油桶夹</a><a href="#">油桶夹</a><a href="#">油桶夹</a>
-					 </li>
-					 <li><a href="#">油桶搬运设备</a><br />
-					 <a href="#">油桶夹</a><a href="#">油桶夹</a><a href="#">油桶夹</a><a href="#">油桶夹</a>
-					 </li>
-					 <li><a href="#">油桶搬运设备</a><br />
-					 <a href="#">油桶夹</a><a href="#">油桶夹</a><a href="#">油桶夹</a><a href="#">油桶夹</a>
-					 </li>
-
-				 </ul>
-				 </li>
-				 <li>
-				 <a href="#">搬运设备</a>
-				 <ul>
-					 <li><a href="#">油桶搬运设备</a><br />
-					 <a href="#">油桶夹</a><a href="#">油桶夹</a><a href="#">油桶夹</a><a href="#">油桶夹</a>
-					 </li>
-					 <li><a href="#">油桶搬运设备</a><br />
-					 <a href="#">油桶夹</a><a href="#">油桶夹</a><a href="#">油桶夹</a><a href="#">油桶夹</a>
-					 </li>
-					 <li><a href="#">油桶搬运设备</a><br />
-					 <a href="#">油桶夹</a><a href="#">油桶夹</a><a href="#">油桶夹</a><a href="#">油桶夹</a>
-					 </li>
-
-				 </ul>
-				 </li>
-
-
-			 </ul>
-		</nav>	
-
+			<%= render "products/nav_list" %>	
 			<div class="list">
 				<div class="title-product"
 					<p><%= @product.title %>
@@ -133,7 +51,7 @@
 		</div>
 		<div class="right-product">
 			<h3><%= t('.recommend') %></h3>
-			<% Product.limit(4).all.each do |product| %>
+			<% Product.limit(2).all.each do |product| %>
 				<div class="recommend">
 					<% product.pictures.limit(1).each do |pic| %>
 						<%= link_to image_tag(pic.image_url(:normal)), product %> 
