@@ -1,8 +1,8 @@
 <% @abouts.each do |about| %>
 	<div class="about-index">
-		<p>	<%= link_to about.title, about %></p>
-	<%= image_tag(about.image_url(:small_thumb)) %>
-	<p><%= truncate(strip_tags(about.content),:length => 180) %></p>
+		<b>	<%= link_to about.title, about %></b>
+		<p><%= link_to image_tag(about.image_url(:small_thumb)), about %>
+	<%= truncate(strip_tags(about.content),:length => 180) %></p>
 </div>
 <% end %>
 

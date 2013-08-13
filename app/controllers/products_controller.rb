@@ -14,8 +14,17 @@ class ProductsController < ApplicationController
 	end
 
 	def search
-		@products = Product.where("title like ? or number like ?", 
-															'%'+params[:q]+'%','%'+params[:q]+'%').order("id desc").paginate(page: params[:page], per_page: 12)
+		@cart = current_cart
+		begin
+			@products = Product.where("title like ? or number like ?", 
+																'%'+params[:q]+'%','%'+params[:q]+'%').order("id desc").paginate(page: params[:page], per_page: 12)
+			if @products.empty?
+				flash[:notice] =  "没有这个产品，返回重新搜索"
+				redirect_to products_path
+			else
+				render 'index'
+			end
+		end
 	end
   # GET /products/1
   # GET /products/1.json
@@ -31,7 +40,7 @@ class ProductsController < ApplicationController
   # GET /products/new.json
   def new
     @product = Product.new
-		3.times{@product.pictures.build}
+		8.times{@product.pictures.build}
 		@product.videos.build
     respond_to do |format|
       format.html # new.html.erb

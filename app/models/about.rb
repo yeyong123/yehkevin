@@ -1,6 +1,6 @@
 class About < ActiveRecord::Base
-  attr_accessible :content, :image, :title, :image_cache,:sorts_attributes
+  attr_accessible :content, :image, :title, :image_cache,:sorts_attributes, :sort_id
 	mount_uploader :image, ImageUploader
-	has_many :sorts
-	accepts_nested_attributes_for :sorts
+	belongs_to :sort
 end
+

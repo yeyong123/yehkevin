@@ -1,5 +1,8 @@
 Yehkevin::Application.routes.draw do
 
+  resources :bananers
+
+
   scope '(:locale)' do
 
 match '/member', to: 'users#index'

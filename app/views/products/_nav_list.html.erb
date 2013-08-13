@@ -2,7 +2,7 @@
 		<h3>分类导航</h3>
 			 <ul>
 				 <li>
-				 <% Category.all.each do |cate| %>
+				 <% Category.limit(1).each do |cate| %>
 					 <%=link_to  cate.name, category_path(cate.id) %>
 				 
 				 <ul>

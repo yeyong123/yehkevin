@@ -11,12 +11,22 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20130812063549) do
+ActiveRecord::Schema.define(:version => 20130813034139) do
 
   create_table "abouts", :force => true do |t|
     t.string   "title"
     t.text     "content"
     t.string   "image"
+    t.datetime "created_at", :null => false
+    t.datetime "updated_at", :null => false
+    t.integer  "sort_id"
+  end
+
+  create_table "bananers", :force => true do |t|
+    t.string   "image"
+    t.text     "describe"
+    t.string   "button"
+    t.string   "url"
     t.datetime "created_at", :null => false
     t.datetime "updated_at", :null => false
   end
@@ -94,6 +104,12 @@ ActiveRecord::Schema.define(:version => 20130812063549) do
     t.string   "number"
     t.text     "content"
     t.integer  "list_id"
+    t.datetime "created_at", :null => false
+    t.datetime "updated_at", :null => false
+  end
+
+  create_table "sorts", :force => true do |t|
+    t.string   "name"
     t.datetime "created_at", :null => false
     t.datetime "updated_at", :null => false
   end

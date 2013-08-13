@@ -26,7 +26,6 @@
 	float: left;
 	margin: 3px 0 5px 5px;
 	height: 300px;
-	border: 1px solid;
 	border-radius: 10px;
 	width: 810px;
 	background: #e8e8e8;
@@ -83,6 +82,16 @@
 	text-decoration: none;
 }
 .right-desc a:hover {
+	background: none;
+	color: black;
+}
+.index-category {
+	clear: both;
+}
+.index-category a {
+	text-decoration: none;
+}
+.index-category a:hover {
 	background: none;
 	color: black;
 }

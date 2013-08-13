@@ -41,11 +41,25 @@
 			</ul>
 		</div>
 		<div class="keyword">
+			<div class="notice-alert">
+				<% if notice %>
+					<span class="notice"><%= notice %></span>
+				<% else %>
+					<b class="alert"><%= alert %></b>
+				<% end %>
+			</div>
 			<%= t('.keyword') %>:<a href="#">高空作业平台</a><a href="#">高空作业平台</a><a href="#">高空作业平台</a><a href="#">高空作业平台</a>
 		</div>
 		</header>
 
 <%= yield %>
-
+<footer>
+</footer>
 </body>
+<div class="returnTop" title="返回顶部！">
+	  <span class="s"></span>
+		  <span class="b"></span>
+			  返回顶部
+			</div>
+
 </html>

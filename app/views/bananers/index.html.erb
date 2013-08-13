@@ -1,0 +1,29 @@
+<h1>Listing bananers</h1>
+
+<table>
+  <tr>
+    <th>Image</th>
+    <th>Describe</th>
+    <th>Button</th>
+    <th>Url</th>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+
+<% @bananers.each do |bananer| %>
+  <tr>
+    <td><%= bananer.image %></td>
+    <td><%= bananer.describe %></td>
+    <td><%= bananer.button %></td>
+    <td><%= bananer.url %></td>
+    <td><%= link_to 'Show', bananer %></td>
+    <td><%= link_to 'Edit', edit_bananer_path(bananer) %></td>
+    <td><%= link_to 'Destroy', bananer, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New Bananer', new_bananer_path %>

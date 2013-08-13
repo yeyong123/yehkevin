@@ -6,15 +6,14 @@ class AboutsController < ApplicationController
 		unless params[:t]
 			@abouts = About.order("id desc").paginate(page: params[:page], per_page: 24)
 		else 
-			@abouts = About.where("sort_name = ?", params[:t]).order("id desc").paginate(page: params[:page], per_page: 24)
+			@abouts = About.where("sort_id = ?", params[:t]).order("id desc").paginate(page: params[:page], per_page: 24)
 		end
   end
 
   # GET /abouts/1
   # GET /abouts/1.json
   def show
-    @about = About.find(params[:id])
-
+		@about = About.find(params[:id])
     respond_to do |format|
       format.html # show.html.erb
       format.json { render json: @about }
@@ -40,7 +39,6 @@ class AboutsController < ApplicationController
   # POST /abouts.json
   def create
     @about = About.new(params[:about])
-
     respond_to do |format|
       if @about.save
         format.html { redirect_to @about, notice: 'About was successfully created.' }

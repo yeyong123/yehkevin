@@ -1,5 +1,8 @@
 <div class="about-list">
 	<ul>
+		<% Sort.all.each do |sort| %>
+			<li><%= link_to sort.name, abouts_path(t:sort) %></li>
+		<% end %>
 			</ul>
 </div>
 <div class="about-right">

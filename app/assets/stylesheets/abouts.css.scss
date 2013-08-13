@@ -2,29 +2,29 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
 .about-index  {
+	float: left;
 	border-bottom: 1px solid;
-	height: 150px;
+	width: 770px;
 }
-.about-index p:last-child, .about-index img {
+.about-index img,.about-index b, .about-index p {
 	float: left;
 }
+.about-index b {
+	width: 770px;
+	padding: 8px;
+	margin-top: 10px;
+
+}
+.about-index img {
+	margin-right: 10px;
+}
 .about-index p {
-	margin: 0;
-	padding: 0;
+	margin: 5px;
+	padding: 5px;
 }
-.about-index p:last-child {
-	width: 300px;
-	word-wrap:break-word;
-	margin-left: 200px;
-}
-.about-index p:first-child,.about-index img {
-	margin-left: 20px;
-}
-.about-index p:first-child {
-	font-size: 14pt;
-	font-style: bold;
-}
+	
 .about-list {
+	margin-top: 10px;
 	width: 150px;
 	float: left;
 	border: 1px solid;
@@ -44,5 +44,6 @@
 }
 
 .about-right {
+	width: 800px;
 	float: left;
 }

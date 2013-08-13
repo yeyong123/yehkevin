@@ -4,8 +4,31 @@
 	<%= render "products/nav_list" %>
 </div>
 <div class="index-image">
-	dasd
-</div>
+	<div id="myCarousel" class="carousel slide">
+		<div class="carousel-inner">
+			<% @bananers.each_with_index do |bananer,index| %>
+				<% if bananer.id == 1 %>
+					<div class="item active">	
+					<% else %>
+						<div class="item">
+						<% end %>
+						<img src="<%= bananer.image %>" alt="" style="margin: auto">
+						<div class="container">
+							<div class="carousel-caption">
+								<p class="lead"><%= bananer.describe %></p>
+								<% if bananer.button.empty? %>
+								<% else %>
+									<a class="btn btn-primary" href="<%= bananer.url %>"><%= bananer.button %> </a>
+								<% end %>
+							</div>
+						</div>   
+					</div>
+				<% end %>
+			</div>
+			<a class="left carousel-control" href="#myCarousel" data-slide="prev">&lsaquo;</a>
+			<a class="right carousel-control" href="#myCarousel" data-slide="next">&rsaquo;</a>
+		</div><!-- /.carousel -->
+	</div>
 <div class="index_show_product">
 	<img src="assets/4.jpg" />
 	<img src="assets/4.jpg" />
@@ -25,19 +48,26 @@
 			<%= render partial: 'companies/company_list', locals: {companies: @companies} %>
 	</div>
 <div class="right-desc">
-		dsa
+	<h3>经典案例</h3>
+	<% About.last(1).each do |about| %>
+		<p><%= link_to image_tag(about.image_url), about %>
+		<%= truncate(strip_tags(about.content), length: 150) %>
+	<% end %>	
 	</div>
 
 </div>
 </aside>
-<div style="clear: both">
-<% @products.each do |product| %>
-	<%= image_tag(product.pictures.first.image_url(:normal)) %>
-	<%= product.title %>
-	<%= product.number %>
-	<%= button_to t('.addcart'), line_items_path(product_id: product), class: "btn btn-info" %>
-<% end %>
-<%= render 'carts/list_cart' %>
+<div class="index-category">
+	<h3>热门标签</h3>
+	<% Category.all.each do |cate| %>
+		|<b>	<%= link_to cate.name, category_path(cate.id) %></b> 
+		<% cate.tags.each do |tag| %>
+			| <%= link_to tag.name, category_path(tag.id) %> 
+			<% tag.lists.each do |list| %>
+				| <%= link_to list.name, products_path(t:list) %>
+			<% end %>
+		<% end %>
+	<% end %>
 </div>
 <!-- 首页界面 -->
 

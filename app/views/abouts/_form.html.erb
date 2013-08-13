@@ -24,6 +24,10 @@
     <%= f.label :image %><br />
     <%= f.file_field :image %>
   </div>
+	<div class="field">
+			<%= f.label :sort_id %>
+			<%= f.select :sort_id, Sort.all.map { |so| [so.name, so.id]} %>
+		</div>
   <div class="actions">
     <%= f.submit %>
   </div>
