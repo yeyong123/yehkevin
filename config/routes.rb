@@ -1,6 +1,6 @@
 Yehkevin::Application.routes.draw do
 
-  
+ scope '(:locale)' do 
 
   
 
@@ -9,7 +9,6 @@ Yehkevin::Application.routes.draw do
   resources :bananers
 
 
-  scope '(:locale)' do
 
 match '/member', to: 'users#index'
  	devise_for :users
