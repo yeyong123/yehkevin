@@ -1,4 +1,7 @@
 #encoding:utf-8
+<% if cart.line_items.empty? %>
+	<p style="color: red">购物车没有产品!</p>
+<% else %>
 <div class="cart_title">cart</div>
 <table class="table">
 	<%= render(cart.line_items) %>
@@ -6,4 +9,4 @@
 <%= button_to '清空', cart, method: :delete, confirm: '确定删除?',class: "btn btn-warning format" %>
 <%= button_to '提交',new_order_path, method: :get, class: "btn format" %>
 
-
+<% end %>

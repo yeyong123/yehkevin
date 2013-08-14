@@ -5,6 +5,7 @@ gem 'rails', '3.2.13'
 # Bundle edge Rails instead:
 # gem 'rails', :git => 'git://github.com/rails/rails.git'
 gem 'rails_admin'
+gem 'kaminari'
 gem 'mysql2'
 gem 'devise'
 gem 'will_paginate'
