@@ -1,5 +1,6 @@
 class CartsController < ApplicationController
-  # GET /carts
+ 
+	before_filter :authenticate_user!
   # GET /carts.json
   def index
     @carts = Cart.all
@@ -29,7 +30,6 @@ end
   # GET /carts/new.json
   def new
     @cart = Cart.new
-		@cart.product.build
     respond_to do |format|
       format.html # new.html.erb
       format.json { render json: @cart }
@@ -44,6 +44,9 @@ end
   # POST /carts
   # POST /carts.json
   def create
+		if @cart.line_items.empty?
+			render 'new'
+		else
     @cart = Cart.new(params[:cart])
 
     respond_to do |format|
@@ -56,7 +59,7 @@ end
       end
     end
   end
-
+	end
   # PUT /carts/1
   # PUT /carts/1.json
   def update

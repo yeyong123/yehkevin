@@ -1,15 +1,17 @@
 Yehkevin::Application.routes.draw do
+  scope '(:locale)' do
 
   
 
   
+
+  devise_for :admins
 
   mount RailsAdmin::Engine => '/admin', :as => 'rails_admin'
 
   resources :bananers
 
 
-  scope '(:locale)' do
 
 match '/member', to: 'users#index'
  	devise_for :users
