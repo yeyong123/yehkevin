@@ -10,7 +10,12 @@
 <body>
 	<header>
 	<div class="gp-log">
-		<%= link_to t('.myaccout'), orders_path(@order) %>
+		<img src="assets/robt.png" />
+		<h2>工业设备专家</h2><br />
+		<b><i class="icon-plus"> </i>便捷订购</b>
+		<b><i class="icon-plus"> </i>一站式服务</b>
+		<b><i class="icon-plus"> </i>致力于服务企业客户</b>
+		<span>咨询电话：400 8826 918</span>
 		<div class="user-login">
 			<% if current_user %>
 			<% if user_signed_in? %>
@@ -23,9 +28,6 @@
 				<%= link_to "登录", new_session_path(:user) %>
 			<% end %>
 		</div>
-		<%= request.url %><br />
-		<%= current_page?(request.url) %>
-		<%= "#{request.fullpath}" %>
 				</div>
 		<div class="header">
 			<ul class="nav">
