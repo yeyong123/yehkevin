@@ -29,6 +29,9 @@
 			<% end %>
 		</div>
 				</div>
+				<div id="navigation">
+					<%= render_navigation(:renderer => :breadcrumbs, :join_with => ' &raquo; ') %>
+				</div>
 		<div class="header">
 			<ul class="nav">
 				<li><%= link_to t('.home'), home_path %></li>

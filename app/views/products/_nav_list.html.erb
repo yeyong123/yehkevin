@@ -7,7 +7,7 @@
 
 		<ul>
 			<% cate.tags.each do |tag| %> 
-				<li><%= link_to tag.name, category_path(tag.id) %><br />
+				<li><%= link_to tag.name, '#' %><br />
 				<% tag.lists.each do |list| %>
 					<%= link_to list.name, products_path(t:list) %>
 				<% end %>
