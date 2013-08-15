@@ -1,9 +1,1 @@
-<% @category.tags.each do |tag| %>
-	<% tag.lists.each do |list| %>
-		<% list.products.each do |product| %>
-			<%= product.title %>
-			<%= image_tag(product.pictures.first.image_url) %>
-		<% end %>
-	<% end %>
-<% end %>
-
+<%= render 'categories/show_list' %>

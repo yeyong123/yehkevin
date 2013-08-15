@@ -10,7 +10,7 @@
 <body>
 	<header>
 	<div class="gp-log">
-		<%= link_to image_tag("robt.png", alt: "robt"), home_path %>
+		<%= link_to image_tag("robt.png", alt: "ROBT"), home_path %>
 		<h2>工业设备专家</h2><br />
 		<b><i class="icon-plus"> </i>便捷订购</b>
 		<b><i class="icon-plus"> </i>一站式服务</b>
@@ -29,7 +29,7 @@
 			<% end %>
 		</div>
 				</div>
-		<div class="header">
+					<div class="header">
 			<ul class="nav">
 				<li><%= link_to t('.home'), home_path %></li>
 				<li><%= link_to t('.products'), products_path  %></li>
@@ -53,9 +53,85 @@
 			<%= t('.keyword') %>:<a href="#">高空作业平台</a><a href="#">高空作业平台</a><a href="#">高空作业平台</a><a href="#">高空作业平台</a>
 		</div>
 		</header>
+	<div id="navigation">
+					<%= render_navigation(:renderer => :breadcrumbs, :join_with => ' &raquo; ') %>
+				</div>
 
-<%= yield %>
+				<div style="clear: both">
+					<%= yield %>
+				</div>
 <footer>
+<div class="footer-dispaly">
+	<div class="footer-menu">
+	<h3>购物指南</h3>
+	<ul>
+		<li><a href="#">产品订购</a></li>
+		<li><a href="#">选购产品</a></li>
+		<li><a href="#">......</a></li>
+<li><a href="#">......</a></li>
+<li><a href="#">......</a></li>
+<li><a href="#">......</a></li>
+
+	</ul>
+</div>
+<div class="footer-menu">
+<h3>售后服务</h3>
+	<ul>
+		<li><a href="#">.......</a></li>
+		<li><a href="#">......</a></li>
+		<li><a href="#">.......</a></li>
+	</ul>
+</div>
+<div class="footer-menu">
+<h3>售后服务</h3>
+	<ul>
+		<li><a href="#">.......</a></li>
+		<li><a href="#">......</a></li>
+		<li><a href="#">.......</a></li>
+	</ul>
+</div>
+
+</div>
+<div class="footer-imag">
+<%= link_to image_tag("robt.png", alt: "robt"), home_path %>
+<h2>工业设备专家</h2>
+<b><i class="icon-plus"> </i>便捷订购</b>
+		<b><i class="icon-plus"> </i>一站式服务</b>
+		<b><i class="icon-plus"> </i>致力于服务企业客户</b>
+
+</div>
+<div class="footer-dispaly">
+	<div class="footer-menu">
+	<h3>购物指南</h3>
+	<ul>
+		<li><a href="#">产品订购</a></li>
+		<li><a href="#">选购产品</a></li>
+		<li><a href="#">......</a></li>
+<li><a href="#">......</a></li>
+<li><a href="#">......</a></li>
+<li><a href="#">......</a></li>
+
+	</ul>
+</div>
+<div class="footer-menu">
+<h3>售后服务</h3>
+	<ul>
+		<li><a href="#">.......</a></li>
+		<li><a href="#">......</a></li>
+		<li><a href="#">.......</a></li>
+	</ul>
+</div>
+<div class="footer-menu">
+<h3>售后服务</h3>
+	<ul>
+		<li><a href="#">.......</a></li>
+		<li><a href="#">......</a></li>
+		<li><a href="#">.......</a></li>
+	</ul>
+</div>
+
+</div>
+
 </footer>
 </body>
 <div class="returnTop" title="返回顶部！">

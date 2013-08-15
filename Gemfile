@@ -1,4 +1,4 @@
-source 'https://rubygems.org'
+source 'http://ruby.taobao.org'
 ruby '2.0.0'
 gem 'rails', '3.2.13'
 
@@ -8,6 +8,7 @@ gem 'rails_admin'
 gem 'kaminari'
 gem 'mysql2'
 gem 'devise'
+gem 'simple-navigation'
 gem 'will_paginate'
 gem 'carrierwave'
 gem 'ckeditor'

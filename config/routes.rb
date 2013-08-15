@@ -11,7 +11,7 @@ Yehkevin::Application.routes.draw do
   resources :bananers
 
 
-
+match '/tag', to: 'categories#tag'
 match '/member', to: 'users#index'
  	devise_for :users
 
